@@ -1,0 +1,145 @@
+/*========== Vars ==========*/
+:root{
+    /*========== Primary colors ==========*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream-color: hsl(30, 38%, 92%);
+
+    /*========== Neutral colors ==========*/
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /*========== Typograghy ==========*/
+    --normal-font-weight: 400;
+    --medium-font-weight: 500;
+    --bold-font-weight: 700;
+    --title-font: "Fraunces", serif;
+}
+/* ========== universal settings =========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*========== Body ==========*/
+body{
+    color: var(--dark-grayish-blue);
+}
+
+/*========== Main container==========*/
+.main-container{
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    place-content: center;
+    background-color: var(--cream-color);
+}
+/* ========== card informations ========== */
+.card-content{
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+/* ==========card image========== */
+.card-img img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/*========== Card texts==========*/
+.card-info{
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+/* ========== perfume text ========== */
+.card-info .perfume{
+    display: block;
+    font-size: .9rem;
+    font-weight: var(--medium-font-weight);
+    letter-spacing: .4rem;
+    margin-bottom: 1rem;
+}
+/* ========== Text title ========== */
+.card-title{
+    font-size: 2.4rem;
+    font-family: var(--title-font);
+    font-weight: var(--bold-font-weight);
+    color: var(--very-dark-blue);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.card-paragraph{
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-weight: var(--medium-font-weight);
+    margin-bottom: 1.5rem;
+}
+/* ========== The price ==========*/
+.price{
+    font-size: 2.3rem;
+    font-family: var(--title-font);
+    color: var(--dark-cyan);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+/* ========== old price ========== */
+.price span{
+    font-size: .98rem;
+    font-weight: var(--medium-font-weight);
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    margin-left: 1.2rem;
+}
+/* ========== shopping button =========== */
+.card-btn{
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border:none;
+    border-radius: .5rem;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+}
+.card-btn img{
+    margin-right: .5rem;
+}
+/* ========== button hover effect ========== */
+.card-btn:hover{
+    background-color: hsl(157, 36%, 23%);
+}
+
+/*========== Media queries ==========*/
+@media screen and (min-width: 768px){
+    .card-content{
+        max-width: 600px;
+        flex-direction: row;
+    }
+    .card-img{
+        width: 300px;
+        height: 100%;
+        content: url('./images/image-product-desktop.jpg');
+        border-radius: 1rem 0 0 1rem;
+        margin-bottom: -6px;
+    }
+    .card-info .perfume,
+    .card-title,
+    .card-paragraph{
+        margin-top: 1.4rem;
+    }
+    .price{
+        margin-bottom: 1.6rem;
+    }
+}
